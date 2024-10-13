@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "63ae5c62-3ec0-4466-a16f-025a5eb91e8f",
+		"name": "final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/persons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"persons"
+							]
+						},
+						"description": "get account By id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/persons/5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/persons/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"persons",
+								"5"
+							]
+						},
+						"description": "Get Person and account and amount Detail By id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/persons",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"firstName\": \"Alireza\",\r\n        \"nationalId\": \"8468387460\",\r\n        \"dateOfBirth\": \"2000-10-04T10:27:05.000+00:00\",\r\n        \"gender\": \"man\",\r\n        \"militaryStatus\": \"complited\",\r\n        \"mobileNumber\": \"09029505301\",\r\n        \"email\": \"Asdas@gmail.saas\",\r\n        \"userStatus\": \"admin\",\r\n        \"lastname\": \"Noroozi\"\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"persons"
+							]
+						},
+						"description": "create Person (Valid Data)"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/persons/9",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t    \"firstName\": \"Alireza\",\n        \"nationalId\": \"8468387460\",\n        \"dateOfBirth\": \"2000-10-04T10:27:05.000+00:00\",\n        \"gender\": \"man\",\n        \"militaryStatus\": \"complited\",\n        \"mobileNumber\": \"09029505301\",\n        \"email\": \"Asdas@gmail.saas\",\n        \"userStatus\": \"admin\",\n        \"lastname\": \"Noroozi\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/persons/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"persons",
+								"9"
+							]
+						},
+						"description": "Update Person By id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/persons/5",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/persons/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"persons",
+								"5"
+							]
+						},
+						"description": "Delete Person By Id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account"
+							]
+						},
+						"description": "Get All Account"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/account/7",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/account/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"7"
+							]
+						},
+						"description": "Get Account By id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"balance\": 1000500.0,\r\n    \"person\": {\r\n        \"id\": \"9\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account"
+							]
+						},
+						"description": "Create Account"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"balance\": 1050500.0,\r\n    \"person\": {\r\n        \"id\": \"9\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/account/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"9"
+							]
+						},
+						"description": "Update Account By id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/account/7",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/account/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"7"
+							]
+						},
+						"description": "Delete Account By Id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pay",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/account/pay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"accountNumber\":\"8377870174149690\",\r\n\"billType\":\"واریز\",\r\n\"billAmount\":\"500000\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/account/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"pay"
+							]
+						},
+						"description": "Account deposit operation"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/api/account/pay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"accountNumber\":\"8377870174149690\",\r\n\"billType\":\"برداشت\",\r\n\"billAmount\":\"500000\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/account/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"account",
+								"pay"
+							]
+						},
+						"description": "Withdrawal from the account"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nationalId\": \"3958852221\",\r\n        \"mobileNumber\": \"09029656201\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "Login By nationalId And mobileNumber"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

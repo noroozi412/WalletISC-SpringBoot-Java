@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User View</title>
+</head>
+<body>
+<h1>User Details</h1>
+<p>ID: <span th:text="${user.id}"></span></p>
+<p>First Name: <span th:text="${user.firstName}"></span></p>
+<p>Last Name: <span th:text="${user.lastname}"></span></p>
+<p>National ID: <span th:text="${user.nationalId}"></span></p>
+<p>Date of Birth: <span th:text="${user.dateOfBirth}"></span></p>
+<p>Gender: <span th:text="${user.gender}"></span></p>
+<p>Military Status: <span th:text="${user.militaryStatus} ? 'Yes' : 'No'"></span></p>
+<p>Mobile Number: <span th:text="${user.mobileNumber}"></span></p>
+<p>Email: <span th:text="${user.email}"></span></p>
+<p>User Status: <span th:text="${user.userStatus}"></span></p>
+
+<h2>Accounts</h2>
+<ul>
+    <li th:each="account : ${user.account}">
+        <p>Account ID: <span th:text="${account.id}"></span></p>
+        <p>Account Number: <span th:text="${account.accountNumber}"></span></p>
+        <p>Sheba Number: <span th:text="${account.shebaNumber}"></span></p>
+        <p>Balance: <span th:text="${account.balance}"></span></p>
+        <p>Creation Date: <span th:text="${account.creationDate}"></span></p>
+    </li>
+</ul>
+</body>
+</html>
